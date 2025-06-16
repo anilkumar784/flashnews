@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FlashNews 24/7 Update</title>
+  <title>FlashNews 24/7 Update - Political & Global Affairs</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet" />
   <style>
     /* Reset and base styling */
@@ -25,9 +25,9 @@
       margin: 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      background-color: #ffffff;
-      color: #6b7280;
-      /* neutral gray */
+      background-color: #f8f9fa;
+      color: #2c3e50;
+      /* navy-gray dark text */
       line-height: 1.7;
       font-weight: 400;
       min-height: 100vh;
@@ -36,14 +36,15 @@
     }
 
     a {
-      color: #10b981;
+      color: #c0392b;
+      /* strong red accent */
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
     a:hover,
     a:focus {
-      color: #047857;
+      color: #922b21;
       outline: none;
       text-decoration: underline;
     }
@@ -65,34 +66,39 @@
 
     /* Header */
     header {
-      background-color: #fff;
-      border-bottom: 1px solid #e5e7eb;
+      background-color: #1c2833;
+      /* dark navy */
+      border-bottom: 3px solid #c0392b;
+      /* red border */
       padding: 24px;
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 4px rgb(0 0 0 / 0.05);
+      box-shadow: 0 3px 6px rgb(31 38 44 / 0.3);
     }
 
     header h1 {
       font-weight: 800;
-      font-size: 2.5rem;
-      color: #111827;
-      margin: 0 0 12px 0;
-      letter-spacing: -0.02em;
+      font-size: 2.75rem;
+      color: #ecf0f1;
+      /* light gray/white */
+      margin: 0 0 16px 0;
+      letter-spacing: -0.03em;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     }
 
     /* Scrolling marquee for upcoming headlines */
     .upcoming-news {
-      background-color: #f3f4f6;
+      background-color: #34495e;
+      /* muted dark blue */
       border-radius: 12px;
-      box-shadow: 0 1px 4px rgb(0 0 0 / 0.05);
+      box-shadow: 0 1px 5px rgb(0 0 0 / 0.35);
       padding: 12px 24px;
       font-size: 1.125rem;
-      color: #374151;
+      color: #ecf0f1;
       overflow: hidden;
       position: relative;
-      height: 2.5rem;
+      height: 2.75rem;
       user-select: none;
       display: flex;
       align-items: center;
@@ -100,12 +106,13 @@
 
     .upcoming-news-label {
       font-weight: 700;
-      color: #10b981;
+      color: #e74c3c;
+      /* vibrant red */
       flex: 0 0 auto;
       margin-right: 16px;
       white-space: nowrap;
       font-size: 1rem;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       user-select: text;
     }
@@ -114,8 +121,8 @@
       display: flex;
       flex-wrap: nowrap;
       white-space: nowrap;
-      animation: marquee-scroll 20s linear infinite;
-      gap: 48px;
+      animation: marquee-scroll 22s linear infinite;
+      gap: 56px;
       flex: 1 1 auto;
     }
 
@@ -125,17 +132,21 @@
     }
 
     .marquee a {
-      color: #10b981;
-      font-weight: 600;
+      color: #e74c3c;
+      font-weight: 700;
       text-decoration: none;
       display: inline-block;
       white-space: nowrap;
       transition: color 0.3s ease;
+      text-transform: capitalize;
+      letter-spacing: 0.02em;
+      font-family: "Georgia", serif;
+      font-size: 1.1rem;
     }
 
     .marquee a:hover,
     .marquee a:focus {
-      color: #047857;
+      color: #922b21;
       text-decoration: underline;
       outline: none;
     }
@@ -152,100 +163,116 @@
 
     /* Articles Section */
     article {
-      background: #f9fafb;
+      background: #ffffff;
       border-radius: 12px;
-      box-shadow: 0 1px 4px rgb(0 0 0 / 0.05);
-      padding: 24px 32px;
-      color: #374151;
+      box-shadow: 0 4px 8px rgb(44 62 80 / 0.1);
+      padding: 28px 36px;
+      color: #2c3e50;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 18px;
+      border: 1.5px solid #dcdde1;
+      font-family: "Georgia", serif;
     }
 
     article h2 {
       margin-top: 0;
-      font-weight: 700;
-      font-size: 1.75rem;
-      color: #111827;
+      font-weight: 900;
+      font-size: 2rem;
+      color: #1b2631;
+      letter-spacing: -0.015em;
+      border-bottom: 2px solid #c0392b;
+      padding-bottom: 12px;
     }
 
     article p {
       margin-bottom: 0;
       font-size: 1.125rem;
-      color: #4b5563;
+      color: #34495e;
+      line-height: 1.8;
     }
 
     article img {
       max-width: 100%;
-      border-radius: 8px;
-      margin: 16px 0;
+      border-radius: 10px;
+      margin: 18px 0;
       object-fit: cover;
-      box-shadow: 0 1px 6px rgb(0 0 0 / 0.1);
+      box-shadow: 0 4px 10px rgb(44 62 80 / 0.15);
+      border: 1px solid #bdc3c7;
     }
 
     /* Section spacing */
     .articles {
       display: flex;
       flex-direction: column;
-      gap: 48px;
+      gap: 56px;
     }
 
     /* Disclaimer Section */
     .disclaimer {
-      margin-top: 64px;
-      padding: 24px 32px;
-      background-color: #f3f4f6;
+      margin-top: 72px;
+      padding: 28px 36px;
+      background-color: #ecf0f1;
       border-radius: 12px;
-      box-shadow: inset 0 0 8px rgb(0 0 0 / 0.05);
-      font-size: 0.9rem;
-      color: #6b7280;
-      max-height: 400px;
+      box-shadow: inset 0 0 10px rgb(0 0 0 / 0.1);
+      font-size: 0.95rem;
+      color: #2c3e50;
+      max-height: 420px;
       overflow-y: auto;
-      line-height: 1.6;
+      line-height: 1.7;
       user-select: text;
+      font-family: "Georgia", serif;
+      border: 1.5px solid #dcdde1;
     }
 
     .disclaimer h3 {
-      font-weight: 700;
-      font-size: 1.5rem;
+      font-weight: 800;
+      font-size: 1.75rem;
       margin-top: 0;
-      margin-bottom: 16px;
-      color: #374151;
+      margin-bottom: 20px;
+      color: #1b2631;
+      letter-spacing: -0.01em;
     }
 
     /* Footer */
     footer {
-      background-color: #f9fafb;
-      border-top: 1px solid #e5e7eb;
-      padding: 24px;
+      background-color: #34495e;
+      border-top: 3px solid #c0392b;
+      padding: 28px 24px;
       text-align: center;
-      font-size: 0.95rem;
-      color: #6b7280;
-      box-shadow: inset 0 1px 3px rgb(0 0 0 / 0.04);
+      font-size: 1rem;
+      color: #ecf0f1;
+      box-shadow: inset 0 1px 3px rgb(0 0 0 / 0.1);
+      font-family: "Georgia", serif;
     }
 
     footer .contact-info {
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
     }
 
     /* Responsive */
     @media screen and (max-width: 768px) {
       header h1 {
-        font-size: 1.75rem;
+        font-size: 1.9rem;
         text-align: center;
       }
       .container {
         padding-left: 16px;
         padding-right: 16px;
+        gap: 36px;
+        padding-top: 32px;
+        padding-bottom: 32px;
       }
 
       article {
-        padding: 16px 20px;
+        padding: 20px 24px;
       }
 
       .upcoming-news {
         height: auto;
-        padding: 12px;
+        padding: 12px 16px;
       }
 
       .upcoming-news-label {
@@ -254,15 +281,26 @@
 
       .marquee {
         animation: none;
-        overflow-x: scroll;
+        overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: thin;
+        padding-bottom: 4px;
       }
 
       .marquee a {
-        padding-right: 32px;
-        white-space: normal;
+        padding-right: 36px;
+        white-space: nowrap;
         display: inline;
+      }
+
+      .disclaimer {
+        max-height: none;
+        padding: 20px;
+      }
+
+      footer {
+        font-size: 0.9rem;
+        padding: 20px 16px;
       }
     }
   </style>
@@ -274,7 +312,7 @@
       <h1>FlashNews 24/7 Update</h1>
 
       <section class="upcoming-news" aria-label="Upcoming News Headlines">
-        <span class="upcoming-news-label">Upcoming News:</span>
+        <span class="upcoming-news-label" aria-hidden="true">Upcoming News:</span>
         <nav class="marquee" role="list">
           <a href="#" role="listitem" aria-label="Upcoming: International Summit on Economic Cooperation">International Summit on Economic Cooperation</a>
           <a href="#" role="listitem" aria-label="Upcoming: New Innovations in Renewable Energy Sector">New Innovations in Renewable Energy Sector</a>
@@ -292,7 +330,7 @@
       <article>
         <h2>Global Markets Rally on Economic Recovery Hopes</h2>
         <p>Global financial markets saw a substantial rally today driven by optimistic forecasts about the economic recovery post-pandemic. Investors are encouraged by the increasing vaccination rates and reopening policies in multiple countries pushing demand and consumer confidence upward.</p>
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/51c14381-7035-48a8-b1df-dc86ae39a365.png" alt="Stock market graph showing upward trend with green highlights" />
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f163239b-bb1b-42d1-a674-dc24d91a443e.png" alt="Political map showing economic zones and markets trending upwards symbolically" />
         <p>Financial experts note that this momentum, however, comes with caution due to ongoing inflation concerns and supply chain challenges. Central banks around the world have assured markets they are prepared to adjust monetary policies accordingly to avoid overheating. Meanwhile, tech shares led the charge, contributing significantly to the indices' gains.</p>
         <p>The rally was marked by heightened trading volumes, with institutional investors taking active positions in cyclical sectors expected to benefit from increased consumer spending in the coming quarters.</p>
       </article>
@@ -300,7 +338,7 @@
       <article>
         <h2>Climate Summit 2025 Emphasizes Renewable Energy Goals</h2>
         <p>International leaders at the Climate Summit 2025 reaffirmed their commitment to reducing carbon emissions with aggressive targets for renewable energy adoption. New agreements were forged focusing on sustainable energy infrastructure and financial mechanisms to support green technologies globally.</p>
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/69ac1a09-6c05-4a60-903d-1dc658084197.png" alt="World leaders gathered at the Climate Summit discussing renewable energy initiatives" />
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/42dff682-8c79-4978-a88c-0ace6c87ab17.png" alt="Political leaders at global summit discussing climate policies with world flags on backdrop" />
         <p>The summit highlighted progress in solar and wind energy deployments, with emphasis on innovation in storage solutions and grid resilience. Delegates discussed challenges inherent in transition strategies for developing nations, underscoring the need for equitable support and technology transfer.</p>
         <p>Environmental organizations lauded the summit’s outcomes while urging for faster implementation on the ground to meet the 2030 goals critical for limiting global warming impacts.</p>
       </article>
@@ -308,7 +346,7 @@
       <article>
         <h2>Health Officials Warn of New Virus Variant Impact</h2>
         <p>Health authorities worldwide are closely monitoring a newly discovered virus variant with concerning transmissibility characteristics. The variant has been detected in multiple countries and is under intense study to determine vaccine efficacy and potential health impacts.</p>
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8a43ad51-8145-4448-bd99-1aece36cb1dc.png" alt="Microscopic view of virus structure depicting the new variant" />
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ddb05ce6-5b65-470b-973d-64e77b87adf2.png" alt="Microscope image with flag icons symbolizing countries monitoring virus outbreaks" />
         <p>Experts caution that current prevention measures remain critical, including mask mandates, social distancing, and vaccination efforts. Ongoing research aims to inform potential updates in vaccine formulations.</p>
         <p>Healthcare systems are preparing for potential case surges by enhancing testing capacities and treatment protocols. Public health campaigns are emphasizing community engagement and awareness to mitigate spread.</p>
       </article>
@@ -316,7 +354,7 @@
       <article>
         <h2>Breakthrough in Battery Technology Promises Longer Life</h2>
         <p>Scientists have announced a significant breakthrough in battery technology that could extend the life and safety of energy storage solutions. The new battery design incorporates novel materials allowing rapid charging and greater energy density.</p>
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f0a84743-0eb2-494d-a04a-88e2866d016a.png" alt="Close up of new advanced battery prototype showing enhanced layers" />
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/20bfe184-9148-4aea-86ed-874cc655482f.png" alt="Close up of battery prototype with global energy infrastructure in background" />
         <p>This innovation holds promise for electric vehicles and renewable energy storage, potentially transforming the energy landscape by making devices more efficient and environmentally friendly.</p>
         <p>Industry leaders expressed enthusiasm for commercial applications and the prospect of reducing dependency on traditional energy sources. Further testing and scaling efforts are underway to bring this technology to market within the next few years.</p>
       </article>
@@ -324,7 +362,7 @@
       <article>
         <h2>Sports Highlights: Championship Finals Thrill Fans Worldwide</h2>
         <p>The championship finals concluded with an exhilarating display of skill and sportsmanship. Fans worldwide were treated to dramatic moments and record-breaking performances as teams battled for the coveted title.</p>
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/21c19a2d-916b-4a27-b981-6c0fb5e2d26a.png" alt="Action shot from the championship finals with players competing intensely" />
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/63c80156-872c-4547-b9eb-1d2f43e65eb4.png" alt="Flags and fans from multiple countries demonstrating sportsmanship and competition" />
         <p>Key athletes delivered standout performances, setting new benchmarks for excellence. The event saw record attendance and viewership, bolstering the sport's global popularity.</p>
         <p>Post-match interviews reflected heartfelt appreciation for the fans' support and promises for continued dedication to the sport’s growth and integrity.</p>
       </article>
@@ -332,7 +370,7 @@
       <article>
         <h2>Technology Advances: AI Integration Transforms Industries</h2>
         <p>Artificial Intelligence continues to revolutionize sectors such as healthcare, finance, and manufacturing by enabling more efficient operations and insightful data analysis. New AI tools have been deployed that streamline workflows, reduce errors, and enhance customer experiences.</p>
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/101c94c7-e1f0-442d-ab4d-e9e50071fd03.png" alt="Illustration of AI network integrating with various industries depicted digitally" />
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d96b3aa1-1c55-44e9-8374-3b6e49b75ee7.png" alt="Digital map with AI nodes highlighting global industrial sectors" />
         <p>Companies investing in AI report increased productivity and a quicker time-to-market for products and services. Ethical AI development and governance remain a priority to ensure responsible use that benefits society as a whole.</p>
         <p>The technology sector remains dynamic as innovations and collaborations continue to push the boundaries of what AI can achieve.</p>
       </article>
@@ -340,7 +378,7 @@
       <article>
         <h2>Travel Sector Rebounds as Restrictions Ease Globally</h2>
         <p>The travel and tourism industry is experiencing a robust rebound following the easing of global restrictions. Airlines, hotels, and hospitality services are reporting significant increases in bookings and revenue.</p>
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c2242773-933c-46d8-8421-cc1781d6bbd2.png" alt="Scenic airport terminal with travelers and aircraft outside" />
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5abf6577-11ef-455b-80e7-bfadfe444fac.png" alt="Airports and world map showing resumption of international flights" />
         <p>New safety protocols and digital health passes have facilitated smoother cross-border travel, restoring consumer confidence. Destinations worldwide are launching campaigns to attract tourists, highlighting safety and unique experiences.</p>
         <p>Industry analysts forecast a strong recovery trend over the next few years, with innovation in sustainable tourism practices gaining momentum.</p>
       </article>
@@ -348,7 +386,7 @@
       <article>
         <h2>Education Innovations Embrace Hybrid Learning Models</h2>
         <p>Schools and universities worldwide are adopting hybrid learning models that blend in-person and virtual instruction to enhance accessibility and flexibility for students and educators.</p>
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dbbb8640-2803-4e89-ab4b-0b7c4cfc0c51.png" alt="Students engaging in virtual and physical classroom environments" />
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/af240f61-39ea-4e9e-aa07-32235a558cda.png" alt="Students attending global online seminars representing international education efforts" />
         <p>Technological advancements are providing educators with innovative tools to tailor learning experiences and track progress effectively. This approach aims to foster better inclusion and support diverse learner needs.</p>
         <p>Policy makers are investing in digital infrastructure and professional development programs to support sustainable implementation and long-term success.</p>
       </article>
@@ -356,7 +394,7 @@
       <article>
         <h2>Economic Policies Adapt to Changing Global Trade Conditions</h2>
         <p>Governments are enacting new economic policies to respond to evolving global trade patterns and supply chain challenges. These measures include adjusting tariffs, incentivizing local manufacturing, and strengthening international partnerships.</p>
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/53104830-01cc-4a2b-bcf3-f3696b8c1b27.png" alt="Global trade network map displaying interconnected logistics routes" />
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bd6e02e5-3fab-4c18-8f3d-42adef802485.png" alt="Political leaders negotiating global trade agreements with international flags" />
         <p>Analysts note that balancing protectionism with globalization will be key to sustaining growth and avoiding market disruptions.</p>
         <p>Business leaders advocate for transparent dialogues between nations to foster cooperation and resilience in the global economy.</p>
       </article>
@@ -364,7 +402,7 @@
       <article>
         <h2>Innovation in Healthcare: Telemedicine Sees Major Expansion</h2>
         <p>Telemedicine services have expanded rapidly, offering patients greater access to healthcare consultations and monitoring from remote locations. This growth is supported by advances in medical devices and digital communication technologies.</p>
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bb29fa32-feb7-40f5-8168-165631bd976e.png" alt="Doctor consulting patient online using a digital tablet and video call" />
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9d5e49d1-6be0-4ec3-8095-1d9c942ac061.png" alt="Doctor consulting a patient online with digital communications across countries" />
         <p>Clinicians report improved patient outcomes through consistent communication and timely intervention. Insurance providers are also adapting policies to cover a broader range of telehealth services.</p>
         <p>Regulatory agencies are working to ensure data privacy and quality standards keeping pace with technology advancements.</p>
       </article>
@@ -372,7 +410,7 @@
       <article>
         <h2>Entertainment Industry Releases High-Profile Productions</h2>
         <p>Entertainment companies have released a slate of high-profile movies, series, and music albums that are attracting widespread audience attention. Streaming platforms report record subscriber numbers fueled by fresh and diverse content.</p>
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/70b30967-099c-4fa9-b858-62fa44be45f3.png" alt="Collage of film and music production scenes reflecting entertainment industry" />
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7d7a33b2-b0dc-4450-8ce4-59dd0906fadc.png" alt="Global film and music productions with political and social themes" />
         <p>Content creators are leveraging new distribution channels and interactive formats to engage audiences and build fan communities across platforms.</p>
         <p>Critics have praised productions for innovative storytelling and technical excellence, signaling a vibrant creative landscape ahead.</p>
       </article>
@@ -414,7 +452,7 @@
     <div class="container">
       <p class="contact-info"><strong>Address:</strong> 226 Ardmore Ave, Toms River, New Jersey 08757</p>
       <p class="contact-info"><strong>Phone:</strong> +1 (888) 666-9822</p>
-      <p>FlashNews 24/7 Update &mdash; Delivering timely and reliable news worldwide.</p>
+      <p>FlashNews 24/7 Update &mdash; Delivering timely and reliable political and global affairs news worldwide.</p>
     </div>
   </footer>
 </body>
